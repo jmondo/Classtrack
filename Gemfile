@@ -27,19 +27,24 @@ gem 'configatron'
 gem 'bourbon'
 gem 'tab_menu'
 gem "twitter-bootstrap-rails", "~> 2.0.1.0"
+gem 'slugged'
+gem 'delayed_job'
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'hpricot'
+
 
 group :development do
   gem 'rspec-rails'
-  
+
   gem 'guard'
   gem 'guard-livereload'
   gem 'guard-rspec'
   gem 'guard-bundler'
   gem 'guard-spin'
-  
+
   gem 'rb-fsevent'
   gem 'growl'
-  
+
   gem 'heroku'
 end
 
@@ -58,4 +63,5 @@ group :test do
 end
 
 gem 'pry', :group => [:development, :test]
+gem 'pry-remote', :group => [:development, :test]
 

@@ -1,0 +1,35 @@
+
+<courses>
+	<status>Completed</status>
+
+	<course>
+		<number>ACC1300</number>
+		<section>01</section>
+		<title><![CDATA[INTRO TO FINANCIAL ACCOUNTING]]></title>
+		<instructors><![CDATA[Bowman, Richard]]></instructors>
+		<meeting>MW     8:00AM- 9:15AM</meeting>
+		<cap>38</cap>
+		<enrolled>38</enrolled>
+	</course>
+
+	<course>
+		<number>ACC1300</number>
+		<section>02</section>
+		<title><![CDATA[INTRO TO FINANCIAL ACCOUNTING]]></title>
+		<instructors><![CDATA[Buttacavoli, Thomas]]></instructors>
+		<meeting>WF     9:45AM-11:20AM</meeting>
+		<cap>38</cap>
+		<enrolled>0</enrolled>
+	</course>
+
+	<course>
+		<number>ACC1301</number>
+		<section>01</section>
+		<title><![CDATA[HONORS INTRO TO FINANCIAL ACCTG]]></title>
+		<instructors><![CDATA[Fetters, Michael L]]></instructors>
+		<meeting>TR     9:45AM-11:00AM</meeting>
+		<cap>35</cap>
+		<enrolled>0</enrolled>
+	</course>
+
+</courses>

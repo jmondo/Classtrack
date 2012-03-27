@@ -1,3 +1,21 @@
+GIT
+  remote: git://github.com/sferik/rails_admin.git
+  revision: ddd89344038290e5edb57e99ffe1e448a1f7e6f8
+  specs:
+    rails_admin (0.0.1)
+      bbenezech-nested_form (~> 0.0.5)
+      bootstrap-sass (~> 2.0)
+      builder (~> 3.0)
+      coffee-rails (~> 3.1)
+      haml (~> 3.1)
+      jquery-rails (>= 1.0)
+      jquery-ui-rails (~> 0.2.2)
+      kaminari (~> 0.12)
+      rack-pjax (~> 0.5)
+      rails (~> 3.1)
+      remotipart (~> 1.0)
+      sass-rails (~> 3.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -33,8 +51,10 @@ GEM
       activesupport
       builder
     arel (3.0.2)
+    bbenezech-nested_form (0.0.5)
     bcrypt-ruby (3.0.1)
     bluecloth (2.2.0)
+    bootstrap-sass (2.0.1)
     bourbon (1.4.0)
       sass (>= 3.1)
     bourne (1.1.1)
@@ -62,6 +82,8 @@ GEM
     configatron (2.9.0)
       yamler (>= 0.1.0)
     database_cleaner (0.7.1)
+    delayed_job (3.0.1)
+      activesupport (~> 3.0)
     devise (2.0.4)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
@@ -106,6 +128,7 @@ GEM
       rest-client (~> 1.6.1)
       rubyzip
     hike (1.2.1)
+    hpricot (0.8.6)
     i18n (0.6.0)
     inherited_resources (1.3.1)
       has_scope (~> 0.5.0)
@@ -114,6 +137,9 @@ GEM
     jquery-rails (2.0.1)
       railties (>= 3.2.0, < 5.0)
       thor (~> 0.14)
+    jquery-ui-rails (0.2.2)
+      jquery-rails
+      railties (>= 3.1.0)
     json (1.6.5)
     kaminari (0.13.0)
       actionpack (>= 3.0.0)
@@ -128,6 +154,8 @@ GEM
       actionpack (>= 3.1)
       less (~> 2.0.7)
     libv8 (3.3.10.4)
+    macaddr (1.5.0)
+      systemu (>= 2.4.0)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -150,9 +178,15 @@ GEM
       coderay (~> 1.0.5)
       method_source (~> 0.7.1)
       slop (>= 2.4.4, < 3)
+    pry-remote (0.1.1)
+      pry (~> 0.9.8)
+      slop (~> 2.1)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
+    rack-pjax (0.5.9)
+      hpricot (~> 0.8.6)
+      rack (~> 1.3)
     rack-ssl (1.3.2)
       rack
     rack-test (0.6.1)
@@ -176,6 +210,7 @@ GEM
     rb-fsevent (0.9.0)
     rdoc (3.12)
       json (~> 1.4)
+    remotipart (1.0.2)
     responders (0.8.0)
       railties (~> 3.1)
     rest-client (1.6.7)
@@ -215,12 +250,17 @@ GEM
       actionpack (~> 3.0)
       activemodel (~> 3.0)
     slop (2.4.4)
+    slugged (1.0.1)
+      activerecord (~> 3)
+      activesupport (~> 3)
+      uuid
     spin (0.4.3)
     sprockets (2.1.2)
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.5)
+    systemu (2.5.0)
     tab_menu (0.0.2)
       actionpack
       rake
@@ -239,6 +279,8 @@ GEM
     uglifier (1.2.3)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
+    uuid (2.3.5)
+      macaddr (~> 1.0)
     warden (1.1.1)
       rack (>= 1.0)
     xpath (0.1.4)
@@ -257,6 +299,7 @@ DEPENDENCIES
   coffee-rails
   configatron
   database_cleaner
+  delayed_job
   devise
   erubis
   factory_girl
@@ -269,6 +312,7 @@ DEPENDENCIES
   guard-spin
   haml
   heroku
+  hpricot
   inherited_resources
   jquery-rails
   kaminari
@@ -277,12 +321,15 @@ DEPENDENCIES
   pg
   postmaster_general (~> 0.1)
   pry
+  pry-remote
   rails (= 3.2.1)
+  rails_admin!
   rb-fsevent
   rspec-rails
   sass-rails
   shoulda
   simple_form
+  slugged
   sqlite3
   tab_menu
   twitter-bootstrap-rails (~> 2.0.1.0)
