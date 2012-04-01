@@ -1,0 +1,13 @@
+<h2>Account Information</h2>
+<p>You either just signed up or changed your information. Here is your new account information!</p>
+<h3>Email</h3>
+<p><%= @student.email %></p>
+
+<h3>Tracking courses</h3>
+<ul>
+  <% @courses.each do |course| %>
+    <li><%= course.name %></li>
+  <% end %>
+</ul>
+<p><%= link_to "Change tracked courses", edit_student_url(@student) %></p>
+<p>FYI - You can always track more courses by revisiting the <%= link_to "home page", root_url %></p>

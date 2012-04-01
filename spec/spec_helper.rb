@@ -12,6 +12,7 @@
   require 'database_cleaner'
   require 'shoulda'
   require 'capybara/rspec'
+  require 'email_spec'
   PostmasterGeneral.log_directory = Rails.root.join("tmp/rendered_emails")
 
   # Requires supporting ruby files with custom matchers and macros, etc,

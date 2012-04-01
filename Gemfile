@@ -60,8 +60,8 @@ group :test do
   gem 'postmaster_general', '~> 0.1'
   # Pretty printed test output
   gem 'fuubar'
+  gem 'email_spec'
 end
 
 gem 'pry', :group => [:development, :test]
-gem 'pry-remote', :group => [:development, :test]
 
