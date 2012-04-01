@@ -2,4 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  flash:
+    students:
+      create:
+        notice: "All signed up! We'll keep track of those for you. If you want to track more classes, just fill out the form again!"
