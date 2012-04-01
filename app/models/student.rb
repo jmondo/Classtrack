@@ -14,8 +14,6 @@ class Student < ActiveRecord::Base
 
   attr_accessor :is_student
 
-  cattr_reader :per_page
-  @@per_page = 50
 
   attr_reader :course_tokens
 
