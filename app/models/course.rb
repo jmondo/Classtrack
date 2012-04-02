@@ -5,6 +5,8 @@ class Course < ActiveRecord::Base
 
   validates_presence_of :semester
 
+  before_update :send_mail_if_just_opened
+
   def json
     {id: self.id, name: self.name}
   end
@@ -15,6 +17,16 @@ class Course < ActiveRecord::Base
 
   def code_section
     "#{self.code}-#{self.section}"
+  end
+
+  protected
+
+  def send_mail_if_just_opened
+    if (enrolled_changed? || cap_changed?) && (enrolled_was >= cap_was) && (enrolled < cap)
+      students.each do |student|
+        CourseMailer.course_opened(self, student).deliver
+      end
+    end
   end
 
 end

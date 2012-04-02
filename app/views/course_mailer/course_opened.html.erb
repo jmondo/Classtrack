@@ -1,0 +1,13 @@
+<h2>Course Opened!</h2>
+<p>You told us to track a course for you, and lo and behold, there is now space!</p>
+<br />
+<h3>Course</h3>
+<p><%= @course.name %></p>
+
+<h3>Quick, Register!</h3>
+<p><%= link_to "Log in to portal", "https://iqweb.babson.edu/SelfService/BabsonSingleLogin.aspx"  %></p>
+
+<br />
+<h3>And the usual options</h3>
+<p><%= link_to "Change tracked courses", student_url(@student, s: @student.random_string) %></p>
+<p>FYI - You can always track more courses by revisiting the <%= link_to "home page", root_url %></p>
