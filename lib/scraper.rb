@@ -53,13 +53,11 @@ class Scraper
     end
 
     def update_course_record(course, course_hash)
-      course.assign_attributes(course_hash)
-      course.save!
+      course.update_attributes(course_hash, without_protection: true)
     end
 
     def update_semester_record(semester, scrape_type)
-      semester.assign_attributes({"last_#{scrape_type.to_s}_scraped_at" => Time.now})
-      semester.save
+      semester.update_attributes({"last_#{scrape_type.to_s}_scraped_at" => Time.now}, without_protection: true)
     end
   end
 end

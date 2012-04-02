@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Administrator.find_or_create_by_email("registrar@babson.edu") do |a|
+  a.password = "Classtrackr0cks"
+  a.password_confirmation = "Classtrackr0cks"
+end
