@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120402040735) do
+ActiveRecord::Schema.define(:version => 20120402161742) do
 
   create_table "administrators", :force => true do |t|
     t.string   "email",                              :default => "", :null => false
@@ -60,6 +60,8 @@ ActiveRecord::Schema.define(:version => 20120402040735) do
     t.string   "cached_slug"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "last_enrollment_scraped_at"
+    t.datetime "last_information_scraped_at"
   end
 
   create_table "slugs", :force => true do |t|

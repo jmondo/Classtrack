@@ -5,23 +5,21 @@ class Scraper
   class << self
 
     def scrape_enrollments
-      scrape_active_semesters_content(:enrollments)
+      Semester.active.each do |semester|
+        scrape_semester_courses(:enrollment, semester)
+      end
     end
 
     def scrape_information
-      scrape_active_semesters_content(:information)
+      Semester.active.each do |semester|
+        scrape_semester_courses(:information, semester)
+      end
     end
 
     protected
 
-    def scrape_active_semesters_content(scrape_type)
-      Semester.active.each do |semester|
-        scrape_semester_courses(scrape_type, semester)
-      end
-    end
-
     def scrape_semester_courses(scrape_type, semester)
-      page = Hpricot::XML(open(semester.xml_url))
+      page = Hpricot::XML(open(semester.xml_url)) rescue return
 
       (page/'course').each do |item|
 
@@ -32,7 +30,7 @@ class Scraper
         course_hash = {}
 
         if course
-          if course.new_record? || scrape_type == :enrollments
+          if course.new_record? || scrape_type == :enrollment
             course_hash[:cap]          =  (item/'cap').inner_text
             course_hash[:enrolled]     =  (item/'enrolled').inner_text
           end
@@ -46,16 +44,22 @@ class Scraper
 
         update_course_record(course, course_hash)
       end
+      update_semester_record(semester, scrape_type)
     end
 
     def find_or_create_course(code, section, semester)
       courses = Course.where(semester_id: semester, code: code, section: section)
-      course = courses.first || courses.build
+      courses.first || courses.build
     end
 
     def update_course_record(course, course_hash)
       course.assign_attributes(course_hash)
       course.save!
+    end
+
+    def update_semester_record(semester, scrape_type)
+      semester.assign_attributes({"last_#{scrape_type.to_s}_scraped_at" => Time.now})
+      semester.save
     end
   end
 end

@@ -12,6 +12,5 @@ describe CourseMailer do
     mail.from.should eql(["admin@classtrackit.com"])
     mail.to.should eql([student.email])
     mail.subject.should eql("Classtrack: #{course.title} is open! Grab it while you can!")
-    EmailSpec::EmailViewer.save_and_open_email(mail)
   end
 end

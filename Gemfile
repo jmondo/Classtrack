@@ -30,6 +30,8 @@ gem "twitter-bootstrap-rails", "~> 2.0.1.0"
 gem 'slugged'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'hpricot'
+gem 'rufus-scheduler'
+gem 'validate_url'
 
 
 group :development do
@@ -56,7 +58,6 @@ group :test do
   gem "capybara"
   gem 'database_cleaner'
   gem 'launchy'
-  gem 'postmaster_general', '~> 0.1'
   # Pretty printed test output
   gem 'fuubar'
   gem 'email_spec'
