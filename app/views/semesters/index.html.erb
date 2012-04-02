@@ -1,0 +1,22 @@
+<h1>Admin: Semesters</h1>
+<%= button_to "Sign out", destroy_administrator_session_path, method: :delete %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Last Updated</th>
+    <th>Active</th>
+    <th>Ending</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% @semesters.order('ending asc').each do |semester| %>
+    <td><%= semester.name %></td>
+    <td><%= distance_of_time_in_words_to_now(semester.last_enrollment_scraped_at, true) rescue "Never" %> ago</td>
+    <td><%= semester.active? %></td>
+    <td><%= semester.ending %></td>
+    <td><%= link_to 'Show', resource_path(semester) %></td>
+    <td><%= link_to 'Edit', edit_resource_path(semester) %></td>
+  <% end %>
+</table>
+<%= link_to 'New Semester', new_semester_path %>
