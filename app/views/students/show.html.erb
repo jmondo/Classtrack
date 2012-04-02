@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Course</th>
+    <th></th>
+  </tr>
+  <% @student.subscriptions.each do |sub| %>
+  <% course = sub.course %>
+  <tr>
+    <td><%= course.name %></td>
+    <td><%= button_to "Stop tracking", subscription_path(sub), method: :delete %></td>
+  </tr>
+  <% end %>
+
+</table>
+
+<p>You can always track more courses by revisiting the <%= link_to "home page", root_path %></p>

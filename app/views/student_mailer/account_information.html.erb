@@ -9,5 +9,5 @@
     <li><%= course.name %></li>
   <% end %>
 </ul>
-<p><%= link_to "Change tracked courses", edit_student_url(@student) %></p>
+<p><%= link_to "Change tracked courses", student_url(@student, s: @student.random_string) %></p>
 <p>FYI - You can always track more courses by revisiting the <%= link_to "home page", root_url %></p>

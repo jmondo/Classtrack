@@ -12,7 +12,7 @@ FactoryGirl.define do
     name                    { "Babson Spring" }
     starting                { Time.now - 1.day }
     ending                  { Time.now + 1.month }
-    xml_url                 { Rails.root.join('public', 'sample.xml').to_s }
+    xml_url                 { Rails.root.join('spec', 'support', 'sample.xml').to_s }
   end
 
   factory :student do

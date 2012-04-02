@@ -6,3 +6,8 @@ en:
     students:
       create:
         notice: "All signed up! We'll keep track of those for you. If you want to track more classes, just fill out the form again!"
+      update:
+        notice: "We know you! We'll keep track of those for you too."
+    subscriptions:
+      destroy:
+        notice: "You are no longer tracking %{code}"

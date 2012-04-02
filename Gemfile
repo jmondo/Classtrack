@@ -28,7 +28,6 @@ gem 'bourbon'
 gem 'tab_menu'
 gem "twitter-bootstrap-rails", "~> 2.0.1.0"
 gem 'slugged'
-gem 'delayed_job'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'hpricot'
 
