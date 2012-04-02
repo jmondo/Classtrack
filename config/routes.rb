@@ -4,6 +4,7 @@ Classtrack4::Application.routes.draw do
   resources :students
   resources :subscriptions, only: :destroy
   resources :semesters
+  resources :courses, only: :index
 
   root to: "students#new"
 end

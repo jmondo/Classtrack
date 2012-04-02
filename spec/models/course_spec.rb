@@ -8,9 +8,6 @@ describe Course do
   it { should validate_presence_of :semester}
 
   let(:course) { Factory(:course, enrolled: 10, cap: 10) }
-  it "returns element as json-ready hash" do
-    course.json.should eql({id: course.id, name: course.name})
-  end
 
   it "returns a combination of things for name" do
     course.name.should eql("#{course.code}-#{course.section} / #{course.title} / #{course.instructors} / #{course.time}")

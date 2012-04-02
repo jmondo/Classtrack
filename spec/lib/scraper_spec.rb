@@ -47,6 +47,7 @@ describe Scraper do
       course.instructors.should eql("Bowman, Richard")
       course.enrolled.should eql(38)
       course.cap.should eql(38)
+      course.semester.should eql(semester)
     end
 
     it "does not scrape inactive semesters" do

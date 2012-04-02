@@ -14,9 +14,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require xhr_fix
-//= require underscore
-//= require backbone
-//= require handlebars
+//= require jquery.tokeninput
+//= require main
 //= require_tree .
 

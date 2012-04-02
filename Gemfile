@@ -26,13 +26,12 @@ gem 'devise'
 gem 'configatron'
 gem 'bourbon'
 gem 'tab_menu'
-gem "twitter-bootstrap-rails", "~> 2.0.1.0"
+gem "twitter-bootstrap-rails"
 gem 'slugged'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'hpricot'
 gem 'rufus-scheduler'
 gem 'validate_url'
-
 
 group :development do
   gem 'rspec-rails'

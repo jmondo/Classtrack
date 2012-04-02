@@ -330,6 +330,6 @@ DEPENDENCIES
   slugged
   sqlite3
   tab_menu
-  twitter-bootstrap-rails (~> 2.0.1.0)
+  twitter-bootstrap-rails
   uglifier
   validate_url

@@ -7,7 +7,8 @@ class Course < ActiveRecord::Base
 
   before_update :send_mail_if_just_opened
 
-  def json
+
+  def attributes
     {id: self.id, name: self.name}
   end
 
