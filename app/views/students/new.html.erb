@@ -1,5 +1,15 @@
-<%= simple_form_for @student, html: { class: 'form-horizontal' } do |f| %>
+<h2>Start tracking courses</h2>
+<%= simple_form_for @student, html: { class: 'form-vertical' } do |f| %>
   <%= f.input :email, required: false %>
-  <%= f.input :course_tokens, required: false %>
-  <%= f.submit "Start tracking" %>
+  <%= f.input :course_tokens, required: false, label: "Courses" %>
+  <%= f.submit "Start tracking", class: "btn btn-custom" %>
+<% end %>
+
+<%= content_for :sidebar do %>
+  <h3>Quick Hits</h3>
+  <p>A course tracking system that makes registering for full college classes a breeze. </p>
+  <p>Tell us your favorite courses and we'll watch them for you. </p>
+  <p>Next time one of your favorites opens, we'll shoot you an email.</p>
+  <br />
+  <p>Created by <a href="http://jmondo.com/">John Gesimondo ‘12</a></p>
 <% end %>

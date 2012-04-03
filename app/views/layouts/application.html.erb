@@ -23,9 +23,24 @@
           <a href="/"><h1>ClassTrack <small>Relax. We're watching your classes.</small></h1></a>
         </div>
         <div class="row">
+          <% if yield(:sidebar).present? %>
+            <div class="span6 main-column">
+          <% else %>
+            <div class="span13">
+          <% end %>
+
           <%= render :partial => 'layouts/flashes' -%>
 
           <%= yield %>
+          </div>
+
+          <% if yield(:sidebar).present? %>
+            <div class="span3 right-column">
+              <%= yield :sidebar %>
+            </div>
+          <% end %>
+
+
         </div>
       </div>
     </div>
