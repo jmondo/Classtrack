@@ -44,4 +44,5 @@ class Student < ActiveRecord::Base
     StudentMailer.account_information(self).deliver
   end
 
+
 end
