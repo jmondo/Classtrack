@@ -2,7 +2,7 @@
 <%= simple_form_for @student, html: { class: 'form-vertical' } do |f| %>
   <%= f.input :email, required: false %>
   <%= f.input :course_tokens, required: false, label: "Courses" %>
-  <%= f.submit "Start tracking", class: "btn btn-custom" %>
+  <%= f.submit "Start tracking", class: "btn btn-custom btn-large", style: "margin-top: 10px" %>
 <% end %>
 
 <%= content_for :sidebar do %>
