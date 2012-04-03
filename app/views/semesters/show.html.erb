@@ -10,7 +10,7 @@
   <dd><%= @semester.ending %></dd>
 
   <dt>Course information source</dt>
-  <dd><%= link_to @semester.xml_url %></dd>
+  <dd><%= link_to @semester.xml_url, @semester.xml_url %></dd>
 
   <dt>Last information update</dt>
   <dd><%= distance_of_time_in_words_to_now(@semester.last_information_scraped_at) rescue "Never" %></dd>
@@ -18,3 +18,5 @@
   <dt>Last enrollment update</dt>
   <dd><%= distance_of_time_in_words_to_now(@semester.last_enrollment_scraped_at, true) rescue "Never" %></dd>
 </dl>
+
+<%= link_to 'Back', collection_path %>
