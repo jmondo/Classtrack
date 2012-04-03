@@ -6,6 +6,6 @@ class CoursesController < ApplicationController
   protected
 
   def collection
-    @courses ||= Course.where(semester_id: Semester.active)
+    @courses ||= Course.where(semester_id: Semester.active).where("title ilike ? or code ilike ? or instructors ilike ?", "%#{params[:q]}%", "%#{params[:q]}%", "%#{params[:q]}%")
   end
 end
