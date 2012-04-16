@@ -31,6 +31,7 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'hpricot'
 gem 'rufus-scheduler'
 gem 'validate_url'
+gem 'git-deploy'
 
 group :development do
   gem 'rspec-rails'

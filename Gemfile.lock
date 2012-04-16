@@ -102,6 +102,10 @@ GEM
       rspec (~> 2.0)
       rspec-instafail (~> 0.2.0)
       ruby-progressbar (~> 0.0.10)
+    git-deploy (0.5.4)
+      net-scp
+      net-ssh
+      thor
     growl (1.0.3)
     guard (1.0.1)
       ffi (>= 0.5.0)
@@ -164,6 +168,9 @@ GEM
     mocha (0.10.4)
       metaclass (~> 0.0.1)
     multi_json (1.2.0)
+    net-scp (1.0.4)
+      net-ssh (>= 1.99.1)
+    net-ssh (2.3.0)
     netrc (0.7.1)
     nokogiri (1.5.2)
     orm_adapter (0.0.7)
@@ -299,6 +306,7 @@ DEPENDENCIES
   erubis
   factory_girl
   fuubar
+  git-deploy
   growl
   guard
   guard-bundler
