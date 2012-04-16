@@ -65,10 +65,8 @@ Classtrack4::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
+  config.middleware.use(ExceptionNotifier,
+    email_prefix:           "[Classtrack] ",
+    sender_address:         %{"notifier" <admin@classtrackit.com>},
+    exception_recipients:   %w{admin@classtrackit.com})
 end
-
-Whatever::Application.config.middleware.use(ExceptionNotifier,
-  email_prefix:           "[Classtrack] ",
-  sender_address:         %{"notifier" <admin@classtrackit.com>},
-  exception_recipients:   %w{admin@classtrackit.com}
-)
