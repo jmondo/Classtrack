@@ -93,6 +93,8 @@ GEM
       rspec (~> 2.0)
     erubis (2.7.0)
     eventmachine (0.12.10)
+    exception_notification (2.6.0)
+      actionmailer (>= 3.0.4)
     execjs (1.3.0)
       multi_json (~> 1.0)
     factory_girl (2.6.3)
@@ -304,6 +306,7 @@ DEPENDENCIES
   devise
   email_spec
   erubis
+  exception_notification
   factory_girl
   fuubar
   git-deploy

@@ -32,6 +32,7 @@ gem 'hpricot'
 gem 'rufus-scheduler'
 gem 'validate_url'
 gem 'git-deploy'
+gem 'exception_notification'
 
 group :development do
   gem 'rspec-rails'

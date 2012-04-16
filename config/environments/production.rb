@@ -66,3 +66,9 @@ Classtrack4::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
 end
+
+Whatever::Application.config.middleware.use(ExceptionNotifier,
+  email_prefix:           "[Classtrack] ",
+  sender_address:         %{"notifier" <admin@classtrackit.com>},
+  exception_recipients:   %w{admin@classtrackit.com}
+)
