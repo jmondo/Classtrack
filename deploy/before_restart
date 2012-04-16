@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env git_ruby
 oldrev, newrev = ARGV
 
 def run(cmd)
