@@ -172,3 +172,10 @@ li.token-input-selected-token {
 .control-group.datetime select {
   width: 100px;
 }
+
+form.button_to {
+  margin: 4px;
+  input {
+    margin: 0;
+  }
+}
