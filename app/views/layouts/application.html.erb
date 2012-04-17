@@ -9,13 +9,14 @@
     <meta name="description" content="<%= yield(:description) || "PROJECT DESCRIPTION" %>" />
     <meta name="keywords" content="<%= yield(:keywords) || "PROJECT KEYWORDS" %>" />
     <%= csrf_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <%= stylesheet_link_tag "application" %>
 
     <%= yield :extra_header %>
   </head>
   <body class="<%= body_class %>">
-    <div class="container">
+    <div class="container container-fixed">
 
       <div class="content">
         <div class="page-header">
@@ -23,9 +24,9 @@
         </div>
         <div class="row">
           <% if yield(:sidebar).present? %>
-            <div class="span6 main-column">
+            <div class="span5 main-column">
           <% else %>
-            <div class="span13">
+            <div class="span9">
           <% end %>
 
           <%= render :partial => 'layouts/flashes' -%>
