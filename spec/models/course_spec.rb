@@ -10,7 +10,7 @@ describe Course do
   let(:course) { Factory(:course, enrolled: 10, cap: 10) }
 
   it "returns a combination of things for name" do
-    course.name.should eql("#{course.code}-#{course.section} / #{course.title} / #{course.instructors} / #{course.time}")
+    course.name.should eql("#{course.code}-#{course.section} / #{course.semester.name} / #{course.title} / #{course.instructors} / #{course.time}")
   end
 
   it "returns code section format" do

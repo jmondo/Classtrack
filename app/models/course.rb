@@ -13,11 +13,11 @@ class Course < ActiveRecord::Base
   end
 
   def name
-    "#{self.code}-#{self.section} / #{self.title} / #{self.instructors} / #{self.time}"
+    "#{code}-#{section} / #{semester.name} / #{title} / #{instructors} / #{time}"
   end
 
   def code_section
-    "#{self.code}-#{self.section}"
+    "#{code}-#{section}"
   end
 
   protected
