@@ -57,7 +57,6 @@ select {
 	margin-bottom: 5px;
 }
 footer {
-/*        border:none;*/
   text-align: center;
 }
 .input span {
@@ -79,16 +78,11 @@ textarea,
 select,
 .uneditable-input,
 ul.token-input-list {
-  width: 280px;
+  width: 80%;
 }
 
-div.token-input-dropdown {
-  width: 288px;
-}
-
-
-#new_student {
-  width: 300px;
+#new_student input.string {
+  width: 80%;
 }
 
 ul.token-input-list {
