@@ -6,5 +6,7 @@ Classtrack4::Application.routes.draw do
   resources :semesters
   resources :courses, only: :index
 
+  match '/sms_configuration' => 'pages#sms_configuration', as: :sms
+
   root to: "students#new"
 end
