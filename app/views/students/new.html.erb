@@ -1,7 +1,6 @@
 <h2>Start tracking courses</h2>
 <%= simple_form_for @student, html: { class: 'form-vertical' } do |f| %>
-  <%= f.label :email, required: false, class: 'inline_label' %> &nbsp; <%= link_to 'SMS for $3', 'https://gumroad.com/l/KdmJ' %>
-  <%= f.input :email, required: false, label: false %>
+  <%= f.input :email, required: false %>
   <%= f.input :course_tokens, required: false, label: "Courses" %>
   <%= f.submit "Start tracking", class: "btn btn-custom btn-large", style: "margin-top: 10px" %>
 <% end %>
