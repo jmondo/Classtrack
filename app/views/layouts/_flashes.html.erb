@@ -1,5 +1,7 @@
 <div id="flash">
   <% flash.each do |key, value| -%>
-    <div class="alert <%= bootstrap_flash_key(key) %>"><%=h value %></div>
+    <% unless key == :student_id %>
+      <div class="alert <%= bootstrap_flash_key(key) %>"><%=h value %></div>
+    <% end %>
   <% end -%>
 </div>

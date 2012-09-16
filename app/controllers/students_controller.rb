@@ -9,7 +9,10 @@ class StudentsController < ApplicationController
       update
     else
       create! do |format|
-        format.html { redirect_to root_path }
+        format.html do
+          flash[:student_id] = resource.id
+          redirect_to root_path
+        end
       end
     end
   end
@@ -18,6 +21,7 @@ class StudentsController < ApplicationController
     update! do |success,failure|
       success.html do
         flash[:notice] = t("flash.students.update.notice")
+        flash[:student_id] = resource.id
         redirect_to root_path
       end
       failure.html do
