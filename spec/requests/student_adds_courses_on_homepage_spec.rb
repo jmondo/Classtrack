@@ -8,7 +8,7 @@ feature 'student_adds_courses_on_homepage' do
     scenario "student signs up from home page" do
       visit root_path
       fill_in "Email", with: "john@me.com"
-      fill_in "Course tokens", with: course.id
+      fill_in "Courses", with: course.id
       click_button "Start tracking"
       page.should have_content "All signed up! We'll keep track of those for you. If you want to track more classes, just fill out the form again!"
 
@@ -29,7 +29,7 @@ feature 'student_adds_courses_on_homepage' do
     scenario "student visits homepage and signs up again" do
       visit root_path
       fill_in "Email", with: "john@me.com"
-      fill_in "Course tokens", with: course.id
+      fill_in "Courses", with: course.id
       click_button "Start tracking"
       page.should have_content "We know you! We'll keep track of those for you too."
 

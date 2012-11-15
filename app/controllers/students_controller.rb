@@ -8,10 +8,13 @@ class StudentsController < ApplicationController
     if !build_resource.new_record?
       update
     else
-      create! do |format|
-        format.html do
+      create! do |success,failure|
+        success.html do
           flash[:student_id] = resource.id
           redirect_to root_path
+        end
+        failure.html do
+          render 'new'
         end
       end
     end
@@ -25,8 +28,8 @@ class StudentsController < ApplicationController
         redirect_to root_path
       end
       failure.html do
-        # flash[:alert] = t("flash.students.update.alert")
-        redirect_to root_path
+        flash[:alert] = t("flash.students.update.alert")
+        render 'new'
       end
     end
   end
