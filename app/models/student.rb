@@ -5,6 +5,9 @@ class Student < ActiveRecord::Base
   attr_accessible :email, :course_tokens
 
   validates_presence_of :random_string, :email
+  validates_format_of :email,
+    with: /^[a-zA-Z0-9\_\-]+[a-zA-Z0-9\.\_\-]*@([a-zA-Z0-9\_\-]+\.)+([a-zA-Z]{2,4})$/
+
   validate :course_tokens_provided, on: :create
   # this should also do it on update, but it could break other things
   # as of right now, user can go to home page, put in email w/ no courses, and get no error
