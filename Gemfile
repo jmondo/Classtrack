@@ -33,6 +33,7 @@ gem 'rufus-scheduler'
 gem 'validate_url'
 gem 'git-deploy'
 gem 'exception_notification'
+gem 'newrelic_rpm'
 
 group :development do
   gem 'rspec-rails'
