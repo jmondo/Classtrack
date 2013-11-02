@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 
@@ -27,7 +27,7 @@ gem 'bourbon'
 gem 'tab_menu'
 gem 'twitter-bootstrap-rails'
 gem 'slugged'
-gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'rails_admin'
 gem 'hpricot'
 gem 'rufus-scheduler'
 gem 'validate_url'
